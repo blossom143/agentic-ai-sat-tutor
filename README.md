@@ -1,5 +1,4 @@
-# Hoot — ADHD-Aware SAT Tutor Demo
-
+# Demo - Dynamic Tutor Agent for K-12 Students with ADHD 
 ## Setup
 
 ```bash
