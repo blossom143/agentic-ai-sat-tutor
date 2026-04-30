@@ -208,7 +208,7 @@ def update_state_after_answer(state, domain, difficulty, correct):
 
 def generate_cot(state, domain, difficulty, question_text):
     k = state["knowledge"]
-    prompt = f"""You are Hoot, a warm and encouraging AI tutor for a student with ADHD.
+    prompt = f"""You are Erdem, a warm and encouraging AI tutor for a student with ADHD.
 
 Student's current state:
 - Cognitive Mode: {state['cognitive_mode']}

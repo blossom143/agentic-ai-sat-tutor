@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hoot — AI Tutor</title>
+<title>ADHD SAT Tutor Agent</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -214,6 +214,37 @@ header {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Phone friendly ── */
+@media (max-width: 640px) {
+  .app-layout { flex-direction: column; height: auto; }
+  
+  .sidebar {
+    width: 100%; min-width: unset;
+    border-right: none;
+    border-bottom: 2px solid var(--border);
+    flex-direction: row; flex-wrap: wrap;
+    padding: 12px;
+    gap: 12px;
+    max-height: 200px; overflow-y: auto;
+  }
+  
+  .sidebar-section { min-width: 140px; flex: 1; }
+  
+  .chat-area { height: calc(100vh - 74px - 200px); }
+  
+  .choices { grid-template-columns: 1fr; }
+  
+  .msg-bubble { max-width: 88%; font-size: 13px; }
+  
+  .setup-card { padding: 24px 20px; }
+  
+  .progress-grid { grid-template-columns: 1fr 1fr; }
+  
+  header { padding: 10px 14px; }
+  .header-title { font-size: 18px; }
+}
+
 </style>
 </head>
 <body>
@@ -224,7 +255,7 @@ header {
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
       <img src="/static/owl.png" style="width:52px;height:52px;object-fit:contain;" onerror="this.style.display='none'">
       <div>
-        <div class="setup-title">Hi, I'm Hoot! 🦉</div>
+        <div class="setup-title">Hi, I'm Erdem! 🦉</div>
         <div class="setup-sub">Let's set up your personalized SAT math session.</div>
       </div>
     </div>
@@ -261,7 +292,7 @@ header {
 <header>
   <img src="/static/owl.png" class="logo-img" onerror="this.style.fontSize='28px';this.textContent='🦉'">
   <div>
-    <div class="header-title">Hoot</div>
+    <div class="header-title">Erdem</div>
     <div class="header-sub">ADHD-Aware SAT Tutor</div>
   </div>
   <div class="header-right">
@@ -311,7 +342,7 @@ header {
       <div class="msg msg-tutor">
         <div class="msg-avatar"><img src="/static/owl.png" onerror="this.parentElement.textContent='🦉'"></div>
         <div class="msg-bubble">
-          Hi! I'm <strong>Hoot</strong>, your ADHD-aware SAT tutor 🦉<br>
+          Hi! I'm <strong>Erdem</strong>, your ADHD-aware SAT tutor 🦉<br>
           Please complete the setup to begin your personalized session!
         </div>
       </div>
