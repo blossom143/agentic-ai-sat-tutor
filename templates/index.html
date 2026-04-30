@@ -244,6 +244,95 @@ header {
   header { padding: 10px 14px; }
   .header-title { font-size: 18px; }
 }
+/* ── Drawer handle (mobile only, hidden on desktop) ── */
+.drawer-handle {
+  display: none;
+  padding: 10px 16px 6px;
+  cursor: grab;
+  user-select: none;
+  flex-shrink: 0;
+}
+.handle-bar {
+  width: 40px; height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  margin: 0 auto 8px;
+}
+.handle-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.handle-mode { font-weight: 700; }
+.handle-hint { color: var(--muted); font-size: 11px; transition: opacity .3s; }
+
+.sidebar-inner {
+  padding: 0 16px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* ── Mobile layout ── */
+@media (max-width: 640px) {
+  .app-layout {
+    flex-direction: column;
+    height: calc(100vh - 74px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Chat takes full space */
+  .chat-area {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Sidebar becomes a bottom drawer */
+  .sidebar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    max-height: 75vh;
+    border-right: none;
+    border-top: 2px solid var(--border);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.12);
+    padding: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    transition: transform .35s cubic-bezier(.32,.72,0,1);
+    transform: translateY(calc(100% - 56px)); /* collapsed — only handle visible */
+    touch-action: none;
+  }
+
+  .sidebar.open {
+    transform: translateY(0);
+  }
+
+  .drawer-handle {
+    display: block; /* show on mobile */
+  }
+
+  /* Hide hint text when open */
+  .sidebar.open .handle-hint { opacity: 0; }
+
+  /* Choices stack on mobile */
+  .choices { grid-template-columns: 1fr; }
+
+  .msg-bubble { max-width: 88%; font-size: 13px; }
+  .setup-card { padding: 24px 20px; }
+  .progress-grid { grid-template-columns: 1fr 1fr; }
+  header { padding: 10px 14px; }
+  .header-title { font-size: 18px; }
+
+  /* Add padding to chat so content isn't hidden behind drawer */
+  .chat-messages { padding-bottom: 72px; }
+}
 
 </style>
 </head>
@@ -305,7 +394,18 @@ header {
 <div class="app-layout">
 
   <!-- Sidebar -->
-  <div class="sidebar">
+<!-- Replace the entire .sidebar div with this: -->
+<div class="sidebar" id="sidebar">
+  <!-- Mobile drag handle -->
+  <div class="drawer-handle" id="drawer-handle">
+    <div class="handle-bar"></div>
+    <div class="handle-labels">
+      <span class="handle-mode" id="handle-mode-text">● Neutral</span>
+      <span class="handle-hint">↑ swipe up for stats</span>
+    </div>
+  </div>
+
+  <div class="sidebar-inner">
     <div class="sidebar-section">
       <div class="sidebar-label">ADHD State</div>
       <div class="stat-row">
@@ -335,7 +435,7 @@ header {
       <div id="knowledge-bars"></div>
     </div>
   </div>
-
+</div>
   <!-- Chat -->
   <div class="chat-area">
     <div class="chat-messages" id="chat-messages">
@@ -616,6 +716,91 @@ function closeProgress() {
 document.getElementById('progress-modal').addEventListener('click', function(e){
   if(e.target===this) closeProgress();
 });
+
+
+// ── Mobile swipe drawer ───────────────────────────────────────────────────────
+(function() {
+  const sidebar  = document.getElementById('sidebar');
+  const handle   = document.getElementById('drawer-handle');
+  if (!handle) return;
+
+  let startY = 0, startTranslate = 0, isDragging = false;
+  let isOpen = false;
+
+  function getTranslate() {
+    const style = window.getComputedStyle(sidebar);
+    const matrix = new WebKitCSSMatrix(style.transform);
+    return matrix.m42; // translateY value
+  }
+
+  function setTranslate(y) {
+    sidebar.style.transition = 'none';
+    sidebar.style.transform  = `translateY(${y}px)`;
+  }
+
+  function snapTo(open) {
+    isOpen = open;
+    sidebar.style.transition = 'transform .35s cubic-bezier(.32,.72,0,1)';
+    sidebar.classList.toggle('open', open);
+    sidebar.style.transform  = '';  // let CSS class handle it
+  }
+
+  // Touch events
+  handle.addEventListener('touchstart', e => {
+    if (window.innerWidth > 640) return;
+    startY         = e.touches[0].clientY;
+    startTranslate = getTranslate();
+    isDragging     = true;
+    sidebar.style.transition = 'none';
+  }, { passive: true });
+
+  window.addEventListener('touchmove', e => {
+    if (!isDragging || window.innerWidth > 640) return;
+    const dy      = e.touches[0].clientY - startY;
+    const newY    = Math.max(0, startTranslate + dy);
+    setTranslate(newY);
+  }, { passive: true });
+
+  window.addEventListener('touchend', e => {
+    if (!isDragging || window.innerWidth > 640) return;
+    isDragging       = false;
+    const currentY   = getTranslate();
+    const threshold  = sidebar.offsetHeight * 0.3; // 30% of height
+    const velocity   = e.changedTouches[0].clientY - startY;
+
+    // Snap open if dragged up enough OR flicked up fast
+    if (currentY < threshold || velocity < -40) {
+      snapTo(true);
+    } else {
+      snapTo(false);
+    }
+  });
+
+  // Tap the handle to toggle
+  handle.addEventListener('click', () => {
+    if (window.innerWidth > 640) return;
+    snapTo(!isOpen);
+  });
+
+  // Tap outside (on chat) to close
+  document.getElementById('chat-messages').addEventListener('click', () => {
+    if (window.innerWidth > 640) return;
+    if (isOpen) snapTo(false);
+  });
+
+  // Update mode text in handle when sidebar updates
+  const origUpdateSidebar = window.updateSidebar;
+  window.updateSidebar = function(state) {
+    origUpdateSidebar(state);
+    const modeEl = document.getElementById('handle-mode-text');
+    if (modeEl) {
+      modeEl.textContent = `● ${state.cognitive_mode}`;
+      modeEl.className   = `handle-mode mode-badge mode-${state.cognitive_mode}`;
+      modeEl.style.background = 'transparent';
+      modeEl.style.padding = '0';
+    }
+  };
+})();
 </script>
 </body>
 </html>
