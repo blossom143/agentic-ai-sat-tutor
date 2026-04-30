@@ -1,0 +1,8 @@
+- OS: macOS-15.5-arm64-arm-64bit Darwin Kernel Version 24.5.0: Tue Apr 22 19:53:27 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T6041
+- Python: 3.12.7
+- Stable-Baselines3: 2.8.0
+- PyTorch: 2.11.0
+- GPU Enabled: False
+- Numpy: 1.26.4
+- Cloudpickle: 3.0.0
+- Gymnasium: 1.2.3

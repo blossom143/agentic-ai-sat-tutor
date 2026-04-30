@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoot — AI Tutor</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --coral:    #FF7B6B;
+  --peach:    #FFAA88;
+  --amber:    #FFB830;
+  --cream:    #FFF8F0;
+  --bg:       #FFF3E8;
+  --card:     #FFFFFF;
+  --text:     #2D2016;
+  --muted:    #8C6E55;
+  --border:   #F0DDD0;
+  --hyper:    #4CAF50;
+  --neutral:  #5B9BD5;
+  --under:    #FF9800;
+  --over:     #F44336;
+  --shadow:   0 4px 24px rgba(255,123,107,0.12);
+  --radius:   18px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  background: var(--card);
+  border-bottom: 2px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 12px rgba(255,123,107,0.08);
+  position: sticky; top: 0; z-index: 100;
+}
+.logo-img { width: 48px; height: 48px; object-fit: contain; }
+.header-title { font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 900; color: var(--coral); }
+.header-sub { font-size: 12px; color: var(--muted); font-weight: 600; }
+.header-right { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+.btn { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 14px;
+       padding: 8px 18px; border-radius: 50px; border: none; cursor: pointer; transition: all .2s; }
+.btn-outline { background: transparent; border: 2px solid var(--coral); color: var(--coral); }
+.btn-outline:hover { background: var(--coral); color: white; }
+.btn-primary { background: var(--coral); color: white; }
+.btn-primary:hover { background: #e85f50; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255,123,107,.3); }
+
+/* ── Mode badge ── */
+.mode-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 14px; border-radius: 50px; font-size: 12px; font-weight: 700;
+}
+.mode-Hyperfocused { background: #E8F5E9; color: var(--hyper); }
+.mode-Neutral      { background: #E3F2FD; color: var(--neutral); }
+.mode-Understimulated { background: #FFF3E0; color: var(--under); }
+.mode-Overwhelmed  { background: #FFEBEE; color: var(--over); }
+
+/* ── Layout ── */
+.app-layout { display: flex; flex: 1; gap: 0; overflow: hidden; height: calc(100vh - 74px); }
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 260px; min-width: 260px;
+  background: var(--card);
+  border-right: 2px solid var(--border);
+  padding: 20px 16px;
+  overflow-y: auto;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.sidebar-section { }
+.sidebar-label { font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 10px; }
+.stat-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.stat-name { font-size: 13px; color: var(--text); font-weight: 600; }
+.stat-bar-wrap { flex: 1; height: 6px; background: var(--border); border-radius: 3px; margin: 0 10px; overflow: hidden; }
+.stat-bar { height: 100%; border-radius: 3px; transition: width .4s ease; }
+.bar-focus { background: var(--neutral); }
+.bar-frustration { background: var(--over); }
+.bar-novelty { background: var(--hyper); }
+.bar-progress { background: var(--amber); }
+.stat-val { font-size: 12px; font-weight: 700; color: var(--muted); min-width: 32px; text-align: right; }
+
+.knowledge-domain { margin-bottom: 10px; }
+.domain-label { font-size: 11px; font-weight: 700; color: var(--text); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.domain-bar-wrap { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.domain-bar { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--peach), var(--coral)); transition: width .4s ease; }
+.domain-pct { font-size: 11px; color: var(--muted); font-weight: 700; margin-top: 2px; }
+
+/* ── Chat area ── */
+.chat-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.chat-messages { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+
+/* ── Messages ── */
+.msg { display: flex; gap: 12px; align-items: flex-start; animation: fadeIn .3s ease; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+.msg-avatar { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+              display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.msg-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.msg-bubble { max-width: 72%; padding: 14px 18px; border-radius: var(--radius); line-height: 1.6; font-size: 14px; }
+
+.msg-tutor .msg-bubble { background: var(--card); border: 1.5px solid var(--border); color: var(--text);
+  border-radius: 4px 18px 18px 18px; box-shadow: var(--shadow); }
+.msg-user { flex-direction: row-reverse; }
+.msg-user .msg-bubble { background: var(--coral); color: white; border-radius: 18px 4px 18px 18px; }
+
+.cot-block { background: #FFF8F0; border-left: 3px solid var(--peach); padding: 10px 14px;
+             border-radius: 0 10px 10px 0; margin-bottom: 12px; font-size: 13px; line-height: 1.7; }
+
+/* ── Question card ── */
+.question-card {
+  background: var(--cream);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-top: 10px;
+}
+.question-tag { display: flex; gap: 8px; margin-bottom: 10px; }
+.tag { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 50px; }
+.tag-domain { background: #FFF3E0; color: #E65100; }
+.tag-difficulty-Easy   { background: #E8F5E9; color: #2E7D32; }
+.tag-difficulty-Medium { background: #E3F2FD; color: #1565C0; }
+.tag-difficulty-Hard   { background: #FCE4EC; color: #880E4F; }
+.question-text { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 14px; line-height: 1.5; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.choice-btn {
+  padding: 10px 14px; border: 2px solid var(--border); border-radius: 12px;
+  background: white; cursor: pointer; font-family: 'Quicksand', sans-serif;
+  font-size: 13px; font-weight: 600; color: var(--text); text-align: left;
+  transition: all .2s; display: flex; gap: 8px; align-items: center;
+}
+.choice-btn:hover:not(:disabled) { border-color: var(--coral); background: #FFF0ED; transform: translateY(-1px); }
+.choice-btn.correct   { border-color: var(--hyper); background: #E8F5E9; color: #2E7D32; }
+.choice-btn.incorrect { border-color: var(--over); background: #FFEBEE; color: #B71C1C; }
+.choice-btn.reveal    { border-color: var(--hyper); background: #E8F5E9; color: #2E7D32; }
+.choice-btn:disabled  { cursor: not-allowed; }
+.choice-letter { font-weight: 800; color: var(--coral); min-width: 18px; }
+
+/* ── Typing indicator ── */
+.typing { display: flex; gap: 5px; align-items: center; padding: 12px 16px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--peach); animation: bounce .8s infinite; }
+.dot:nth-child(2) { animation-delay: .15s; }
+.dot:nth-child(3) { animation-delay: .30s; }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+/* ── Setup screen ── */
+#setup-screen {
+  position: fixed; inset: 0; background: rgba(45,32,22,.6);
+  display: flex; align-items: center; justify-content: center; z-index: 200;
+  backdrop-filter: blur(4px);
+}
+.setup-card {
+  background: var(--card); border-radius: 24px; padding: 36px 40px;
+  max-width: 540px; width: 90%; box-shadow: 0 20px 60px rgba(0,0,0,.2);
+  animation: fadeIn .4s ease;
+}
+.setup-title { font-family: 'Nunito', sans-serif; font-size: 26px; font-weight: 900; color: var(--coral); margin-bottom: 4px; }
+.setup-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+.setup-domain { margin-bottom: 18px; }
+.setup-domain-name { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.level-btns { display: flex; gap: 8px; }
+.level-btn {
+  flex: 1; padding: 8px; border: 2px solid var(--border); border-radius: 10px;
+  background: white; cursor: pointer; font-family: 'Quicksand', sans-serif;
+  font-size: 12px; font-weight: 700; color: var(--muted); transition: all .2s;
+}
+.level-btn.active-Easy   { border-color: var(--hyper); background: #E8F5E9; color: #2E7D32; }
+.level-btn.active-Medium { border-color: var(--neutral); background: #E3F2FD; color: #1565C0; }
+.level-btn.active-Hard   { border-color: var(--over); background: #FFEBEE; color: #B71C1C; }
+.special-select { width: 100%; padding: 10px 14px; border: 2px solid var(--border);
+  border-radius: 12px; font-family: 'Quicksand', sans-serif; font-size: 14px;
+  font-weight: 600; color: var(--text); background: white; margin-top: 8px; }
+.setup-start { width: 100%; margin-top: 24px; padding: 14px; font-size: 16px;
+  font-weight: 800; border-radius: 14px; }
+
+/* ── Progress modal ── */
+#progress-modal {
+  position: fixed; inset: 0; background: rgba(45,32,22,.6);
+  display: none; align-items: center; justify-content: center; z-index: 200;
+  backdrop-filter: blur(4px);
+}
+#progress-modal.open { display: flex; }
+.progress-card {
+  background: var(--card); border-radius: 24px; padding: 32px 36px;
+  max-width: 600px; width: 92%; max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2); animation: fadeIn .3s ease;
+}
+.progress-title { font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 900; color: var(--coral); margin-bottom: 20px; }
+.progress-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+.progress-stat { background: var(--bg); border-radius: 14px; padding: 14px 16px; }
+.ps-label { font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
+.ps-val { font-size: 22px; font-weight: 900; color: var(--text); }
+.ps-sub { font-size: 11px; color: var(--muted); }
+.mode-dist { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.mode-pip { padding: 6px 14px; border-radius: 50px; font-size: 12px; font-weight: 700; }
+.history-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.history-table th { text-align: left; font-weight: 800; color: var(--muted); padding: 6px 8px;
+  border-bottom: 2px solid var(--border); font-size: 11px; text-transform: uppercase; }
+.history-table td { padding: 7px 8px; border-bottom: 1px solid var(--border); }
+.correct-yes { color: var(--hyper); font-weight: 800; }
+.correct-no  { color: var(--over); font-weight: 800; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- Setup Modal -->
+<div id="setup-screen">
+  <div class="setup-card">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
+      <img src="/static/owl.png" style="width:52px;height:52px;object-fit:contain;" onerror="this.style.display='none'">
+      <div>
+        <div class="setup-title">Hi, I'm Hoot! 🦉</div>
+        <div class="setup-sub">Let's set up your personalized SAT math session.</div>
+      </div>
+    </div>
+
+    <div id="domain-setup"></div>
+
+    <div style="margin-top:16px;">
+      <div class="setup-domain-name">Do you have a special interest in any domain?</div>
+      <select class="special-select" id="special-interest">
+        <option value="None">No special interest</option>
+        <option value="Algebra">Algebra</option>
+        <option value="Advanced Math">Advanced Math</option>
+        <option value="Problem-Solving and Data Analysis">Problem-Solving & Data Analysis</option>
+        <option value="Geometry and Trigonometry">Geometry and Trigonometry</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary setup-start" onclick="startSession()">Start Session →</button>
+  </div>
+</div>
+
+<!-- Progress Modal -->
+<div id="progress-modal">
+  <div class="progress-card">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+      <div class="progress-title">📊 Your Progress</div>
+      <button class="btn btn-outline" onclick="closeProgress()">Close</button>
+    </div>
+    <div id="progress-content"></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <img src="/static/owl.png" class="logo-img" onerror="this.style.fontSize='28px';this.textContent='🦉'">
+  <div>
+    <div class="header-title">Hoot</div>
+    <div class="header-sub">ADHD-Aware SAT Tutor</div>
+  </div>
+  <div class="header-right">
+    <span class="mode-badge mode-Neutral" id="mode-header">● Neutral</span>
+    <button class="btn btn-outline" onclick="showProgress()">📊 My Progress</button>
+  </div>
+</header>
+
+<!-- Main layout -->
+<div class="app-layout">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">ADHD State</div>
+      <div class="stat-row">
+        <span class="stat-name">Focus</span>
+        <div class="stat-bar-wrap"><div class="stat-bar bar-focus" id="bar-focus" style="width:60%"></div></div>
+        <span class="stat-val" id="val-focus">0.60</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-name">Frustration</span>
+        <div class="stat-bar-wrap"><div class="stat-bar bar-frustration" id="bar-frustration" style="width:15%"></div></div>
+        <span class="stat-val" id="val-frustration">0.15</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-name">Novelty</span>
+        <div class="stat-bar-wrap"><div class="stat-bar bar-novelty" id="bar-novelty" style="width:100%"></div></div>
+        <span class="stat-val" id="val-novelty">1.00</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-name">Progress</span>
+        <div class="stat-bar-wrap"><div class="stat-bar bar-progress" id="bar-progress" style="width:0%"></div></div>
+        <span class="stat-val" id="val-progress">0.00</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Knowledge</div>
+      <div id="knowledge-bars"></div>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div class="chat-area">
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg msg-tutor">
+        <div class="msg-avatar"><img src="/static/owl.png" onerror="this.parentElement.textContent='🦉'"></div>
+        <div class="msg-bubble">
+          Hi! I'm <strong>Hoot</strong>, your ADHD-aware SAT tutor 🦉<br>
+          Please complete the setup to begin your personalized session!
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const DOMAINS = ["Algebra","Advanced Math","Problem-Solving and Data Analysis","Geometry and Trigonometry"];
+const DOMAIN_SHORT = {"Algebra":"Algebra","Advanced Math":"Adv. Math",
+  "Problem-Solving and Data Analysis":"Prob. Solving","Geometry and Trigonometry":"Geometry"};
+let selectedLevels = {};
+let sessionActive = false;
+let currentChoicesDisabled = false;
+
+// ── Setup ─────────────────────────────────────────────────────────────────────
+function buildSetup() {
+  const el = document.getElementById('domain-setup');
+  DOMAINS.forEach(d => {
+    selectedLevels[d] = 'Easy';
+    el.innerHTML += `
+    <div class="setup-domain">
+      <div class="setup-domain-name">${d}</div>
+      <div class="level-btns" id="lvl-${d.replace(/\s/g,'_')}">
+        ${['Easy','Medium','Hard'].map(l=>`
+          <button class="level-btn ${l==='Easy'?'active-Easy':''}"
+            onclick="selectLevel('${d}','${l}',this)">${l}</button>
+        `).join('')}
+      </div>
+    </div>`;
+  });
+}
+buildSetup();
+
+function selectLevel(domain, level, btn) {
+  selectedLevels[domain] = level;
+  const container = document.getElementById('lvl-' + domain.replace(/\s/g,'_'));
+  container.querySelectorAll('.level-btn').forEach(b => b.className = 'level-btn');
+  btn.className = `level-btn active-${level}`;
+}
+
+async function startSession() {
+  const special = document.getElementById('special-interest').value;
+  document.getElementById('setup-screen').style.display = 'none';
+  sessionActive = true;
+  showTyping();
+  const res = await fetch('/api/start', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({levels: selectedLevels, special_interest: special})
+  });
+  const data = await res.json();
+  hideTyping();
+  updateSidebar(data.state);
+  addTutorMessage(data.cot, data.question, data.choices, data.domain, data.difficulty);
+}
+
+// ── Chat rendering ────────────────────────────────────────────────────────────
+function addTutorMessage(cot, question, choices, domain, difficulty) {
+  const chat = document.getElementById('chat-messages');
+  const id = 'q_' + Date.now();
+  const msg = document.createElement('div');
+  msg.className = 'msg msg-tutor';
+  msg.innerHTML = `
+    <div class="msg-avatar"><img src="/static/owl.png" onerror="this.parentElement.textContent='🦉'"></div>
+    <div class="msg-bubble">
+      <div class="cot-block">${formatCot(cot)}</div>
+      <div class="question-card">
+        <div class="question-tag">
+          <span class="tag tag-domain">${DOMAIN_SHORT[domain]||domain}</span>
+          <span class="tag tag-difficulty-${difficulty}">${difficulty}</span>
+        </div>
+        <div class="question-text">${question}</div>
+        <div class="choices" id="choices-${id}">
+          ${Object.entries(choices).map(([k,v])=>`
+            <button class="choice-btn" onclick="submitAnswer('${k}','${id}')" id="ch-${id}-${k}">
+              <span class="choice-letter">${k}</span>${v}
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    </div>`;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function formatCot(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/🧠/g, '🧠').replace(/💡/g, '💡').replace(/✨/g, '✨')
+    .replace(/\n/g, '<br>');
+}
+
+function addUserMessage(text) {
+  const chat = document.getElementById('chat-messages');
+  const msg = document.createElement('div');
+  msg.className = 'msg msg-user';
+  msg.innerHTML = `<div class="msg-bubble">${text}</div>`;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function showTyping() {
+  const chat = document.getElementById('chat-messages');
+  const el = document.createElement('div');
+  el.className = 'msg msg-tutor'; el.id = 'typing-indicator';
+  el.innerHTML = `
+    <div class="msg-avatar"><img src="/static/owl.png" onerror="this.parentElement.textContent='🦉'"></div>
+    <div class="msg-bubble"><div class="typing">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div></div>`;
+  chat.appendChild(el);
+  chat.scrollTop = chat.scrollHeight;
+}
+function hideTyping() {
+  const el = document.getElementById('typing-indicator');
+  if (el) el.remove();
+}
+
+// ── Answer submission ─────────────────────────────────────────────────────────
+async function submitAnswer(answer, qId) {
+  // Disable all choices
+  document.querySelectorAll(`#choices-${qId} .choice-btn`).forEach(b => b.disabled = true);
+
+  // Show user answer
+  addUserMessage(`I choose <strong>${answer}</strong>`);
+  showTyping();
+
+  const res = await fetch('/api/answer', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({answer})
+  });
+  const data = await res.json();
+  hideTyping();
+
+  // Highlight result
+  const chosen = document.getElementById(`ch-${qId}-${answer}`);
+  const correct = document.getElementById(`ch-${qId}-${data.correct_answer}`);
+  if (data.correct) {
+    if (chosen) chosen.classList.add('correct');
+  } else {
+    if (chosen) chosen.classList.add('incorrect');
+    if (correct) correct.classList.add('reveal');
+  }
+
+  updateSidebar(data.state);
+
+  // Small delay then next question
+  setTimeout(() => {
+    addTutorMessage(data.cot, data.question, data.choices, data.domain, data.difficulty);
+  }, 800);
+}
+
+// ── Sidebar updates ───────────────────────────────────────────────────────────
+function updateSidebar(state) {
+  setBar('focus', state.focus);
+  setBar('frustration', state.frustration);
+  setBar('novelty', state.novelty);
+  if (state.progress_speed !== undefined) setBar('progress', state.progress_speed);
+
+  // Mode badge
+  const badge = document.getElementById('mode-header');
+  badge.className = `mode-badge mode-${state.cognitive_mode}`;
+  badge.textContent = `● ${state.cognitive_mode}`;
+
+  // Knowledge bars
+  const kEl = document.getElementById('knowledge-bars');
+  kEl.innerHTML = '';
+  for (const [domain, val] of Object.entries(state.knowledge)) {
+    const pct = Math.round(val * 100);
+    kEl.innerHTML += `
+      <div class="knowledge-domain">
+        <div class="domain-label">${DOMAIN_SHORT[domain]||domain}</div>
+        <div class="domain-bar-wrap">
+          <div class="domain-bar" style="width:${pct}%"></div>
+        </div>
+        <div class="domain-pct">${pct}%</div>
+      </div>`;
+  }
+}
+
+function setBar(name, val) {
+  const bar = document.getElementById(`bar-${name}`);
+  const label = document.getElementById(`val-${name}`);
+  if (bar) bar.style.width = (val*100)+'%';
+  if (label) label.textContent = val.toFixed ? val.toFixed(2) : val;
+}
+
+// ── Progress modal ────────────────────────────────────────────────────────────
+async function showProgress() {
+  if (!sessionActive) return;
+  const res = await fetch('/api/progress');
+  const data = await res.json();
+  const el = document.getElementById('progress-content');
+  const modeColors = {Hyperfocused:'#4CAF50',Neutral:'#5B9BD5',Understimulated:'#FF9800',Overwhelmed:'#F44336'};
+
+  el.innerHTML = `
+    <div class="progress-grid">
+      <div class="progress-stat">
+        <div class="ps-label">Questions</div>
+        <div class="ps-val">${data.total_questions}</div>
+        <div class="ps-sub">${data.correct} correct</div>
+      </div>
+      <div class="progress-stat">
+        <div class="ps-label">Accuracy</div>
+        <div class="ps-val">${Math.round(data.accuracy*100)}%</div>
+        <div class="ps-sub">Rolling performance</div>
+      </div>
+      <div class="progress-stat">
+        <div class="ps-label">Focus</div>
+        <div class="ps-val">${data.focus}</div>
+        <div class="ps-sub">/ 1.0</div>
+      </div>
+      <div class="progress-stat">
+        <div class="ps-label">Frustration</div>
+        <div class="ps-val">${data.frustration}</div>
+        <div class="ps-sub">/ 1.0</div>
+      </div>
+      <div class="progress-stat">
+        <div class="ps-label">Novelty</div>
+        <div class="ps-val">${data.novelty}</div>
+        <div class="ps-sub">Engagement level</div>
+      </div>
+      <div class="progress-stat">
+        <div class="ps-label">Progress Speed</div>
+        <div class="ps-val">${data.progress_speed}</div>
+        <div class="ps-sub">Rolling accuracy</div>
+      </div>
+    </div>
+
+    <div class="sidebar-label" style="margin-bottom:10px;">COGNITIVE MODE</div>
+    <div class="mode-dist">
+      ${Object.entries(data.mode_distribution).map(([m,c])=>`
+        <span class="mode-pip" style="background:${modeColors[m]}22;color:${modeColors[m]}">
+          ${m}: ${c}
+        </span>`).join('')}
+    </div>
+
+    <div class="sidebar-label" style="margin:14px 0 10px;">KNOWLEDGE LEVELS</div>
+    ${Object.entries(data.knowledge).map(([d,v])=>`
+      <div class="knowledge-domain" style="margin-bottom:12px;">
+        <div class="domain-label">${d}</div>
+        <div class="domain-bar-wrap" style="height:10px;">
+          <div class="domain-bar" style="width:${Math.round(v*100)}%"></div>
+        </div>
+        <div class="domain-pct">${Math.round(v*100)}% — ${v>=0.9?'✅ Mastered':v>=0.6?'📈 Progressing':'🌱 Building'}</div>
+      </div>`).join('')}
+
+    <div class="sidebar-label" style="margin:14px 0 10px;">RECENT HISTORY</div>
+    <table class="history-table">
+      <thead><tr><th>#</th><th>Domain</th><th>Diff</th><th>Result</th><th>Mode</th><th>Focus</th></tr></thead>
+      <tbody>
+        ${(data.history||[]).slice(-10).reverse().map(h=>`
+          <tr>
+            <td>${h.step}</td>
+            <td>${DOMAIN_SHORT[h.domain]||h.domain}</td>
+            <td>${h.difficulty}</td>
+            <td class="${h.correct?'correct-yes':'correct-no'}">${h.correct?'✓':'✗'}</td>
+            <td>${h.mode}</td>
+            <td>${h.focus}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>`;
+
+  document.getElementById('progress-modal').classList.add('open');
+}
+
+function closeProgress() {
+  document.getElementById('progress-modal').classList.remove('open');
+}
+document.getElementById('progress-modal').addEventListener('click', function(e){
+  if(e.target===this) closeProgress();
+});
+</script>
+</body>
+</html>

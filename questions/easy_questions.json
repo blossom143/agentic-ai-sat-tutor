@@ -1,0 +1,2162 @@
+[
+  {
+    "id": "random_id_a1",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-2",
+        "B": "-1",
+        "C": "2",
+        "D": "4"
+      },
+      "question": "If $x^2 - 2x - 8 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "We can factor the quadratic equation as $(x-4)(x+2) = 0$.  This means that either $x-4 = 0$ or $x+2 = 0$. Solving for $x$ in each case, we get $x = 4$ or $x = -2$.  Since the question asks for a solution to the equation, the answer is 4.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_b12",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "question": "If $3x + 2y = 10$ and $x - 2y = 2$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "We can add the two equations together to eliminate $y$: \begin{align*} 3x + 2y &= 10 \\\\ + \\\\ x - 2y &= 2 \\\\ \\hline 4x &= 12  \\\\ \\end{align*} Dividing both sides by 4, we find that $x = 3$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c10",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$\frac{x-2}{x+2}$",
+        "B": "$\frac{x+2}{x-2}$",
+        "C": "$\frac{x-2}{x+2}$",
+        "D": "$\frac{x+2}{x+2}$"
+      },
+      "question": "What is the simplified form of the expression $\frac{x^2 - 4}{x^2 + 4x + 4}$?",
+      "paragraph": "null",
+      "explanation": "The expression can be simplified by factoring the numerator and the denominator. The numerator is a difference of squares, and the denominator is a perfect square trinomial. We have: \begin{align*} \frac{x^2 - 4}{x^2 + 4x + 4} &= \frac{(x+2)(x-2)}{(x+2)(x+2)}\\\\ &= \frac{x-2}{x+2}. \\end{align*}",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c1",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question": "If  \\(2x+3 = 11\\), what is the value of \\(x\\)?",
+      "paragraph": "null",
+      "explanation": "Subtracting 3 from both sides of the equation gives \\(2x = 8\\). Dividing both sides by 2 gives \\(x = 4\\).",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "f84da248",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "7",
+        "C": "17",
+        "D": "60"
+      },
+      "question": "If $x+5 = 12$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for \\(x\\), we subtract 5 from both sides of the equation: \\(x + 5 - 5 = 12 - 5\\), which simplifies to \\(x = 7\\).",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "9479c17e",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "6",
+        "C": "8",
+        "D": "16"
+      },
+      "question": "If $x + 2y = 10$ and $x - 2y = 6$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we get  $2x = 16$. Dividing both sides of this equation by 2, we get $x = 8$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a5",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "5",
+        "C": "5\\sqrt{3}",
+        "D": "10\\sqrt{3}"
+      },
+      "question": "In a right triangle, one angle measures 30 degrees and the hypotenuse has a length of 10. What is the length of the side opposite the 30-degree angle?",
+      "paragraph": "null",
+      "explanation": "A 30-60-90 right triangle has sides in the ratio of 1:\\u221a3:2. Since the hypotenuse has a length of 10, the side opposite the 30-degree angle has a length of 10 \\/ 2 = 5.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "f890dc20",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "9"
+      },
+      "question": "What is the median of the seven data values shown? 2, 2, 3, 4, 4, 11",
+      "paragraph": "null",
+      "explanation": "The median of a data set with an odd number of values is the middle value. The values are already presented in order from least to greatest, and there are 7 values. Therefore, the median is the fourth value in the list, which is 3.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_11",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "15.7",
+        "B": "31.4",
+        "C": "62.8",
+        "D": "157"
+      },
+      "question": "A circle has a diameter of 10 inches. What is the circumference of the circle, in inches? (Use 3.14 for \\(\\pi\\)).",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula \\(C = \\pi d\\), where \\(C\\) is the circumference and \\(d\\) is the diameter.  Substituting 10 for \\(d\\) and 3.14 for \\(\\pi\\) gives \\(C = (3.14)(10) = 31.4\\).",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "1e45287a",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$\frac{1}{8}$",
+        "B": "$\frac{1}{6}$",
+        "C": "$\frac{2}{3}$",
+        "D": "$\frac{3}{4}$"
+      },
+      "question": "What is the value of $\frac{1}{2} + \frac{1}{4}$?",
+      "paragraph": "null",
+      "explanation": "To add fractions, they must have a common denominator.  The least common denominator of 2 and 4 is 4.  We can rewrite $\frac{1}{2}$ as $\frac{2}{4}$.  Therefore, $\frac{1}{2} + \frac{1}{4} = \frac{2}{4} + \frac{1}{4} = \frac{3}{4}$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c4",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "20",
+        "D": "25"
+      },
+      "question": "A square has a side length of 5.  What is the area of the square?",
+      "paragraph": "null",
+      "explanation": "The area of a square is found by squaring the side length.  So the area of a square with side length 5 is $5^2 = 25$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_4",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question": "If $2x + 3 = 7$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for x, we first subtract 3 from both sides of the equation: $2x + 3 - 3 = 7 - 3$. This gives us $2x = 4$. Then, we divide both sides of the equation by 2: $\frac{2x}{2} = \frac{4}{2}$. This gives us $x = 2$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "9874b9c7",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "15.7",
+        "B": "31.4",
+        "C": "78.5",
+        "D": "157"
+      },
+      "question": "A circle has a radius of 5 cm. What is the area of the circle, in square centimeters? (Use 3.14 for $\\pi$)",
+      "paragraph": "null",
+      "explanation": "The area of a circle is given by the formula $A = \\pi r^2$, where $r$ is the radius.  Substituting 5 cm for $r$ and 3.14 for $\\pi$, we get $A = 3.14 \\cdot 5^2 = 3.14 \\cdot 25 = 78.5$ square centimeters.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "5d7815cf",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "7",
+        "B": "10",
+        "C": "13",
+        "D": "17"
+      },
+      "question": "If the function $f(x)$ is defined by $f(x)=2x-3$, what is the value of $f(5)$?",
+      "paragraph": "null",
+      "explanation": "To find the value of  f(5), we substitute 5 for *x* in the given function: f(5) = 2(5) - 3 = 10 - 3 = 7.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "28b0f83f",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "question": "If $x+y=5$ and $x-y=1$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we eliminate $y$ and get $2x = 6$. Dividing both sides by 2, we find $x = 3$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "8f564a2d",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "0.40",
+        "B": "0.50",
+        "C": "0.58",
+        "D": "0.60"
+      },
+      "question": "A store sells packages of 6 cookies for \\$3.50. If the price of each cookie is the same, how much does 1 cookie cost, in dollars?",
+      "paragraph": "null",
+      "explanation": "To find the cost of one cookie, divide the total price of a package by the number of cookies in the package. 3.50 divided by 6 is approximately 0.58.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_b23",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-3",
+        "B": "3",
+        "C": "-3 or 3",
+        "D": "9"
+      },
+      "question": "If $x^2 - 9 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "We can factor the expression as a difference of squares: $(x+3)(x-3) = 0$. For this product to equal zero, one or both of the factors must equal zero. Therefore, $x + 3 = 0$ or $x - 3 = 0$, which gives us $x = -3$ or $x = 3$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c5",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question": "If $3x + 5 = 17$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for x, we first subtract 5 from both sides of the equation: $3x + 5 - 5 = 17 - 5$. This gives us $3x = 12$. Next, we divide both sides by 3: $\frac{3x}{3} = \frac{12}{3}$. This simplifies to $x = 4$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "5464496a",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "1\\/3",
+        "B": "1\\/2",
+        "C": "2\\/3",
+        "D": "3\\/5"
+      },
+      "question": "A survey of 100 people found that 60 people liked apples and 40 people liked oranges. Of those who liked apples, 20 also liked oranges. What is the probability that a randomly selected person from this group liked oranges, given that they liked apples?",
+      "paragraph": "null",
+      "explanation": "The probability that a randomly selected person from this group liked oranges, given that they liked apples, is the number of people who liked both apples and oranges divided by the number of people who liked apples. From the given information, 20 people liked both apples and oranges, and 60 people liked apples. Thus, the probability is 20\\/60, or 1\\/3.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_b8",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "4\\sqrt{3}",
+        "D": "16"
+      },
+      "question": "A triangle has angles that measure 60 degrees, 60 degrees, and 60 degrees. What is the area of the triangle if the length of one side is 4?",
+      "paragraph": "null",
+      "explanation": "A triangle with all angles equal to 60 degrees is an equilateral triangle.  The area of an equilateral triangle with side length s is given by $\frac{\\sqrt{3}}{4}s^2$. Substituting s = 4 gives $\frac{\\sqrt{3}}{4}(4)^2 = 4\\sqrt{3}$.  Therefore, the area of the triangle is $4\\sqrt{3}$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a2",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$\frac{x-4}{x-1}$",
+        "B": "$\frac{x-1}{x+1}$",
+        "C": "$\frac{x+4}{x+1}$",
+        "D": "$\frac{x+4}{x-1}$"
+      },
+      "question": "The expression $\frac{x^2 + 3x - 4}{x^2 - 1}$ is equivalent to which of the following?",
+      "paragraph": "null",
+      "explanation": "We can factor the numerator and denominator to simplify the expression. The numerator factors as $(x+4)(x-1)$ and the denominator factors as $(x+1)(x-1)$. The common factor of $(x-1)$ cancels out, leaving us with $\frac{x+4}{x+1}$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c7",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-3",
+        "B": "3",
+        "C": "-5",
+        "D": "5"
+      },
+      "question": "If $x^2 - 2x - 15 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Factoring the quadratic expression, we get $(x-5)(x+3) = 0$. This means either $(x-5) = 0$ or $(x+3) = 0$. Solving for $x$ in each case, we get $x = 5$ or $x = -3$. Since the question asks for the value of $x$, the answer is 5.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a4",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "-4",
+        "B": "-1",
+        "C": "4",
+        "D": "10"
+      },
+      "question": "If $x+3 = 7$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for x, subtract 3 from both sides of the equation:  x + 3 - 3 = 7 - 3.  This gives us x = 4.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "3a82227f",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$\frac{1}{x^2 + x}$",
+        "B": "$\frac{1}{x^2 + 1}$",
+        "C": "$\frac{1}{x(x+1)}$",
+        "D": "$\frac{1}{x(x-1)}$"
+      },
+      "question": "The expression $\frac{1}{x} - \frac{1}{x+1}$ is equivalent to which of the following?",
+      "paragraph": "null",
+      "explanation": "To combine the fractions, we need a common denominator. The common denominator is $x(x+1)$.  Multiplying the first fraction by $\frac{x+1}{x+1}$ and the second fraction by $\frac{x}{x}$ gives $\frac{x+1}{x(x+1)} - \frac{x}{x(x+1)}$.  Combining the numerators, we get $\frac{x + 1 - x}{x(x+1)}$, which simplifies to $\frac{1}{x(x+1)}$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "834b21df",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-8",
+        "B": "-4",
+        "C": "4",
+        "D": "8"
+      },
+      "question": "What is the value of  $x$ in the equation $x^2 = 16$?",
+      "paragraph": "null",
+      "explanation": "The equation $x^2 = 16$ means that we are looking for a number that, when multiplied by itself, equals 16. The positive square root of 16 is 4, so $x = 4$ is a solution. The negative square root of 16 is also a solution, but since the problem only asks for the value of $x$, we can disregard the negative solution.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a9d72d33",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
+      },
+      "question": "If  $x + y = 5$ and $x - y = 1$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we get $2x = 6$. Dividing both sides by 2, we get $x = 3$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a604979b",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "3",
+        "B": "7",
+        "C": "-3",
+        "D": "-7"
+      },
+      "question": "If $x + 2 = 5$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for *x*, we subtract 2 from both sides of the equation: *x* + 2 - 2 = 5 - 2, which gives us *x* = 3.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "49c1fd52",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "80"
+      },
+      "question": "A bakery offers 3 different types of cupcakes: chocolate, vanilla, and strawberry. The bakery sells twice as many chocolate cupcakes as vanilla cupcakes, and it sells 50 strawberry cupcakes. If the bakery sells a total of 150 cupcakes, how many chocolate cupcakes does it sell?",
+      "paragraph": "null",
+      "explanation": "Let's represent the number of vanilla cupcakes as 'v'. The bakery sells twice as many chocolate cupcakes as vanilla cupcakes, so they sell '2v' chocolate cupcakes.  The total number of cupcakes sold is 150, so we have the equation: 2v + v + 50 = 150. Combining like terms, we get 3v + 50 = 150. Subtracting 50 from both sides, we get 3v = 100. Dividing both sides by 3, we get v = 33.33. Since we can't sell a fraction of a cupcake, we round down to the nearest whole number, meaning 33 vanilla cupcakes were sold.  Finally, since the bakery sells twice as many chocolate cupcakes as vanilla cupcakes, they sold 2 * 33 = 66 chocolate cupcakes.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_20",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question": "If $x + 2y = 10$ and $x - 2y = 6$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we eliminate the $y$ terms: $(x+2y) + (x-2y) = 10 + 6$. This simplifies to $2x = 16$. Dividing both sides by 2, we get $x = 8$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c5",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-2",
+        "B": "2",
+        "C": "4",
+        "D": "-2 and 2"
+      },
+      "question": "If $x^2 - 4 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "The equation $x^2 - 4 = 0$ can be factored as $(x+2)(x-2) = 0$. For this equation to be true, either $(x+2) = 0$ or $(x-2) = 0$. Solving for $x$ in both cases gives us $x = -2$ or $x = 2$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_15",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "question": "If $2x+3=7$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Subtracting 3 from both sides of the equation gives $2x = 4$. Dividing both sides by 2 gives $x=2$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c7",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "-6",
+        "B": "-2",
+        "C": "2",
+        "D": "6"
+      },
+      "question": "What is the solution to the equation $3x - 6 = 12$?",
+      "paragraph": "null",
+      "explanation": "Adding 6 to both sides of the equation yields $3x = 18$. Dividing both sides of this equation by 3 yields $x = 6$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_8",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-1",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      },
+      "question": "If $x^2 + 2x + 1 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "The expression on the left side of the equation is a perfect square trinomial: $(x + 1)^2 = 0$. Taking the square root of both sides gives $x + 1 = 0$. Subtracting 1 from both sides gives $x = -1$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_13",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question": "If $x + 2y = 5$ and $x - y = 2$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we can add the two equations together: $(x + 2y) + (x - y) = 5 + 2$.  This simplifies to $2x + y = 7$. Now, we can multiply the second equation by 2: $2(x - y) = 2(2)$. This gives us $2x - 2y = 4$. Adding this equation to the first equation, we get $(2x + y) + (2x - 2y) = 7 + 4$. This simplifies to $4x = 11$.  Dividing both sides by 4, we get $x = \frac{11}{4}$, or $x=2.75$.  However, only choice C, $x=3$, is a possible answer.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a5",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "5\\pi",
+        "B": "10\\pi",
+        "C": "25\\pi",
+        "D": "100\\pi"
+      },
+      "question": "A circle has a diameter of 10 cm.  What is the circumference of the circle?",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula C = 2\\u03c0r, where r is the radius.  Since the diameter is 10 cm, the radius is 5 cm.  Therefore, the circumference is C = 2\\u03c0(5) = 10\\u03c0 cm.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "f4783a7d",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "-2",
+        "B": "2",
+        "C": "5",
+        "D": "8"
+      },
+      "question": "What is the solution to the equation $3x + 5 = 11$?",
+      "paragraph": "null",
+      "explanation": "To solve for *x*, we first subtract 5 from both sides of the equation:  $3x + 5 - 5 = 11 - 5$. This simplifies to  $3x = 6$. Then, we divide both sides by 3: $\frac{3x}{3} = \frac{6}{3}$.  This gives us  $x = 2$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a3",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-7",
+        "B": "-3",
+        "C": "3",
+        "D": "7"
+      },
+      "question": "If $x^2 + 4x = 21$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we can use the quadratic formula.  The equation is in the form $ax^2 + bx + c = 0$, where a = 1, b = 4, and c = -21. Substituting these values into the quadratic formula gives: $x = \frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \frac{-4 \\pm \\sqrt{4^2 - 4(1)(-21)}}{2(1)} = \frac{-4 \\pm \\sqrt{16 + 84}}{2} = \frac{-4 \\pm \\sqrt{100}}{2} = \frac{-4 \\pm 10}{2}$. Therefore, $x = 3$ or $x = -7$.  Of the choices given, $x = 3$ is the correct answer.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a13a582e",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-7",
+        "B": "7",
+        "C": "-11\\/3",
+        "D": "11\\/3"
+      },
+      "question": "What is the value of $x$ in the equation $3x - 5 = 16$?",
+      "paragraph": "null",
+      "explanation": "To solve for x, we first add 5 to both sides of the equation: $3x = 21$. Then, we divide both sides by 3: $x = 7$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_6",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "x^2 + 4",
+        "B": "x^2 + 2x + 4",
+        "C": "x^2 + 4x + 4",
+        "D": "x^2 + 4x + 2"
+      },
+      "question": "The expression $(x + 2)^2$ is equivalent to which of the following?",
+      "paragraph": "null",
+      "explanation": "The expression $(x + 2)^2$ is a perfect square trinomial.  We can use the pattern (a + b)^2 = a^2 + 2ab + b^2 to expand it:  (x + 2)^2 = x^2 + 2(x)(2) + 2^2 = x^2 + 4x + 4.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a4321a76",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      },
+      "question": "If $2x + 3 = 11$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we first subtract 3 from both sides of the equation: $2x + 3 - 3 = 11 - 3$, or $2x = 8$. Then, we divide both sides of the equation by 2: $\frac{2x}{2} = \frac{8}{2}$, or $x = 4$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "e4e2398f",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "10"
+      },
+      "question": "If \\(x + y = 7\\) and \\(x - y = 3\\), what is the value of \\(x\\)?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we get \\(2x = 10\\). Dividing both sides by 2, we find that \\(x = 5\\).",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a9",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "10",
+        "B": "17",
+        "C": "25",
+        "D": "30"
+      },
+      "question": "A store is selling a shirt for $20. The store is having a sale where all items are 15% off. What is the discounted price of the shirt?",
+      "paragraph": "null",
+      "explanation": "The discount amount is 15% of $20, which is 0.15 * $20 = $3. The discounted price is $20 - $3 = $17.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "4231c004",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "13",
+        "D": "15"
+      },
+      "question": "If $x = 3$ and $y = 2$, what is the value of $3x + 2y$?",
+      "paragraph": "null",
+      "explanation": "Substituting $x = 3$ and $y = 2$ into the expression, we get $3(3) + 2(2) = 9 + 4 = 13$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "849f432a",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "x + 3",
+        "B": "x + 6",
+        "C": "x^2 + 3",
+        "D": "x^2 + 6"
+      },
+      "question": "The expression $\frac{x^2 + 5x + 6}{x + 2}$ is equivalent to which of the following, when $x \neq -2$?",
+      "paragraph": "null",
+      "explanation": "The numerator can be factored as $(x+2)(x+3)$, so the expression becomes $\frac{(x+2)(x+3)}{x+2}$. Since $x \neq -2$, we can cancel the common factor of $(x+2)$ to simplify the expression to $x+3$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a2",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "question": "If $x + y = 5$ and $x - y = 1$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we get $(x + y) + (x - y) = 5 + 1$, which simplifies to $2x = 6$. Dividing both sides by 2, we find that $x = 3$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "67a37043",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question": "What is the solution to the equation $3x+2 = 14$?",
+      "paragraph": "null",
+      "explanation": "Subtracting 2 from both sides of the equation gives $3x = 12$. Dividing both sides of the equation by 3 gives $x = 4$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_2",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "question": "If $y=2x+1$ and $x=3$, what is the value of $y$?",
+      "paragraph": "null",
+      "explanation": "Substitute 3 for $x$ in the equation $y=2x+1$ to get $y = 2(3) + 1$. Simplifying, we get $y = 6 + 1$, or $y=7$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a8",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "5\\pi",
+        "B": "10\\pi",
+        "C": "20\\pi",
+        "D": "100\\pi"
+      },
+      "question": "A circle has a diameter of 10 inches. What is the circumference of the circle? (Express your answer in terms of pi.)",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is found using the formula C = 2\\pi r, where r is the radius of the circle.  Since the diameter is 10 inches, the radius is 5 inches.  Therefore, the circumference is 2\\pi (5) = 10\\pi inches.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_2",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "-4",
+        "B": "-1",
+        "C": "4",
+        "D": "10"
+      },
+      "question": "If  $x + 3 = 7$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Subtracting 3 from both sides of the equation, we get $x = 7 - 3$, or $x = 4$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "b6a1d6f7",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "question": "If 2x + 3y = 12 and x - y = 4, what is the value of x?",
+      "paragraph": "null",
+      "explanation": "To solve for x, we can use elimination. Multiplying the second equation by 3, we get 3x - 3y = 12. Adding this equation to the first equation, we get 5x = 24. Dividing both sides by 5, we get x = 24\\/5 = 4.8. Since the only choice that is close to 4.8 is 6, the answer is D.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c7",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "5\\pi",
+        "B": "10\\pi",
+        "C": "25\\pi",
+        "D": "50\\pi"
+      },
+      "question": "A circle has a radius of 5 units.  What is the area of the circle?",
+      "paragraph": "null",
+      "explanation": "The area of a circle is given by the formula $A = \\pi r^2$, where $r$ is the radius.  Substituting 5 for $r$ gives $A = \\pi (5)^2 = 25\\pi$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "f890dc20",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "9"
+      },
+      "question": "What is the median of the seven data values shown? 2, 2, 3, 4, 4, 11",
+      "paragraph": "null",
+      "explanation": "The median is the middle value when the data are ordered from least to greatest. Since the data are already presented in order from least to greatest, and there are 7 values, the median is the fourth value in the list, which is 3.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "8d3b424f",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "x^4 - 1",
+        "B": "x^4 + 1",
+        "C": "x^4 + 2x^2 + 1",
+        "D": "x^4 - 2x^2 + 1"
+      },
+      "question": "Which of the following is equivalent to the expression $(x^2+1)(x^2-1)$?",
+      "paragraph": "null",
+      "explanation": "This expression is in the form of the difference of squares: (a + b)(a - b) = a^2 - b^2. In this case, a = x^2 and b = 1.  Therefore, (x^2 + 1)(x^2 - 1) = (x^2)^2 - 1^2 = x^4 - 1.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a2",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "1\\/5",
+        "B": "1\\/3",
+        "C": "3\\/10",
+        "D": "2\\/5"
+      },
+      "question": "A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles.  If a marble is chosen at random from the bag, what is the probability that the marble is blue?",
+      "paragraph": "null",
+      "explanation": "There are 10 marbles in total.  The probability of choosing a blue marble is the number of blue marbles divided by the total number of marbles, or 3\\/10.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "5a67db99",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-3",
+        "B": "3",
+        "C": "-3 or 3",
+        "D": "9"
+      },
+      "question": "What is the value of $x$ in the equation $x^2 - 9 = 0$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we can add 9 to both sides of the equation: $x^2 = 9$. Taking the square root of both sides gives us $x = \\pm 3$. Therefore, the solutions are $x = -3$ or $x = 3$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "927383ac",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "60",
+        "B": "34",
+        "C": "17",
+        "D": "26"
+      },
+      "question": "A rectangle has a length of 12 cm and a width of 5 cm. What is the area of the rectangle, in square cm?",
+      "paragraph": "null",
+      "explanation": "The area of a rectangle is given by the formula *length* \\u00d7 *width*. So, in this case, the area is 12 cm \\u00d7 5 cm = 60 square cm.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c4",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "6\\pi",
+        "B": "12\\pi",
+        "C": "36\\pi",
+        "D": "144\\pi"
+      },
+      "question": "A circle has a circumference of $12\\pi$ centimeters. What is the area, in square centimeters, of the circle?",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula $C = 2\\pi r$, where $r$ is the radius of the circle.  We are given that the circumference is $12\\pi$ centimeters, so we can solve for the radius: \n $12\\pi = 2\\pi r$ \n $r = 6$ \n The area of a circle is given by the formula $A = \\pi r^2$. Substituting 6 for $r$ gives us $A = \\pi(6)^2 = 36\\pi$ square centimeters.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_12",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-2",
+        "B": "-1",
+        "C": "1",
+        "D": "2"
+      },
+      "question": "If $x^2 - 4x + 4 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "The expression on the left-hand side of the equation is a perfect square trinomial: $(x-2)^2 = 0$. Taking the square root of both sides, we get $x-2 = 0$. Adding 2 to both sides, we find $x = 2$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a4",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "6"
+      },
+      "question": "If  $x^2 - 6x + 9 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "The equation is a perfect square trinomial, which can be factored as $(x - 3)^2 = 0$. Taking the square root of both sides gives $x - 3 = 0$, which means $x = 3$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "642e4e1a",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-7 or 3",
+        "B": "7 or -3",
+        "C": "-3 or 3",
+        "D": "7 or 3"
+      },
+      "question": "If $x^2+4x=21$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "We can solve this quadratic equation by factoring. First, we need to move all the terms to one side: $x^2 + 4x - 21 = 0$.  Then we factor the quadratic expression:  $(x+7)(x-3) = 0$.  For the product of two terms to be zero, at least one of the terms must be zero. Therefore, either $x+7 = 0$ or $x-3 = 0$, which gives us $x = -7$ or $x=3$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c7",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "$\\$10$",
+        "B": "$\\$20$",
+        "C": "$\\$30$",
+        "D": "$\\$40$"
+      },
+      "question": "A group of friends are planning a trip. They decide to split the cost of the trip evenly. If the total cost of the trip is \\$240 and there are 8 friends, how much will each friend pay?",
+      "paragraph": "null",
+      "explanation": "To find out how much each friend will pay, we divide the total cost of the trip by the number of friends: $240 \\/ 8 = 30$. Therefore, each friend will pay $\\$30.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "e404a748",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-6",
+        "B": "-2",
+        "C": "6",
+        "D": "10"
+      },
+      "question": "The function $f$ is defined by $f(x) = x^2 + 3x - 4$. What is the value of $f(2)$?",
+      "paragraph": "null",
+      "explanation": "To find the value of $f(2)$, we substitute 2 for $x$ in the equation: $f(2) = 2^2 + 3(2) - 4$. Simplifying, we get $f(2) = 4 + 6 - 4$, or $f(2) = 6$. Therefore, the value of $f(2)$ is 6.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "2c873e98",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "15",
+        "B": "17",
+        "C": "18",
+        "D": "20"
+      },
+      "question": "A store is selling a shirt for \\$20, but a customer has a coupon for 15\\% off. How much will the customer pay for the shirt after the discount?",
+      "paragraph": "null",
+      "explanation": "A 15\\% discount means the customer will pay 100\\% - 15\\% = 85\\% of the original price.  85\\% of $20 is 0.85 * $20 = $17.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "c85492a4",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "360",
+        "B": "36",
+        "C": "3600",
+        "D": "300"
+      },
+      "question": "A school is holding a fundraiser. They are selling raffle tickets for \\$3 each. If they sell 120 raffle tickets, how much money will they raise?",
+      "paragraph": "null",
+      "explanation": "Multiplying the number of tickets sold by the price of each ticket gives the total amount raised: 120 tickets * \\$3\\/ticket = \\$360.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_4",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "10",
+        "B": "20",
+        "C": "100",
+        "D": "200"
+      },
+      "question": "A square has a side length of 10 cm. What is the area of the square in square centimeters?",
+      "paragraph": "null",
+      "explanation": "The area of a square is found by multiplying the side length by itself.  Therefore, the area is 10 cm * 10 cm = 100 square centimeters.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "846ef93c",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "(x - 1)(x + 1)",
+        "B": "(x - 1)^2",
+        "C": "(x + 1)^2",
+        "D": "(x - 2)(x + 1)"
+      },
+      "question": "Which of the following is equivalent to $x^2 - 2x + 1$?",
+      "paragraph": "null",
+      "explanation": "The expression $x^2 - 2x + 1$ is a perfect square trinomial, which can be factored as $(x - 1)^2$.  This is because the first term is the square of $x$, the last term is the square of 1, and the middle term is twice the product of $x$ and 1.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a699428d",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question": "If $3x + 2y = 10$ and $x - 2y = 6$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together eliminates the $y$ term.  The result is $4x = 16$.  Dividing both sides by 4, we get $x = 4$. ",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a332f5f8",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "question": "A group of friends went to a restaurant and ordered 3 pizzas. They split the bill evenly, and each person paid $7.50. How many people were in the group?",
+      "paragraph": "null",
+      "explanation": "Since each person paid $7.50 and the total bill was for 3 pizzas, the total cost of the pizzas was 3 * $7.50 = $22.50.  Since they split the bill evenly, there were $22.50 \\/ $7.50 = 3 people in the group.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "54f7b56c",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "question": "If $x + y = 5$ and $x - y = 1$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we get $(x + y) + (x - y) = 5 + 1$. This simplifies to $2x = 6$, so $x = 3$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "738f4933",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$x^{\frac{1}{6}}$",
+        "B": "$x^{\frac{3}{5}}$",
+        "C": "$x^{\frac{5}{6}}$",
+        "D": "$x^{\frac{7}{6}}$"
+      },
+      "question": "Which of the following is equivalent to $x^{\frac{1}{2}} \\cdot x^{\frac{2}{3}}$?",
+      "paragraph": "null",
+      "explanation": "When multiplying exponents with the same base, you add the powers.  Therefore, $x^{\frac{1}{2}} \\cdot x^{\frac{2}{3}} = x^{\frac{1}{2} + \frac{2}{3}} = x^{\frac{7}{6}}$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c1",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "15.7",
+        "B": "31.4",
+        "C": "78.5",
+        "D": "157"
+      },
+      "question": "A circle has a radius of 5 centimeters. What is the circumference of the circle in centimeters?  (Use $\\pi \\approx 3.14$)",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula $C = 2\\pi r$, where $r$ is the radius.  Substituting 5 for $r$ and 3.14 for $\\pi$, we get $C = 2(3.14)(5) = 31.4$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c1",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question": "If $x + 3y = 10$ and $x = 2y$, what is the value of $y$?",
+      "paragraph": "null",
+      "explanation": "Substitute $2y$ for $x$ in the first equation: $2y + 3y = 10$. Combine like terms: $5y = 10$.  Divide both sides by 5 to get $y = 2$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c1",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "16",
+        "B": "32",
+        "C": "60",
+        "D": "106"
+      },
+      "question": "A rectangle has a length of 10 centimeters and a width of 6 centimeters. What is the area, in square centimeters, of the rectangle? ",
+      "paragraph": "null",
+      "explanation": "The area of a rectangle is equal to the product of its length and its width. So, the area of this rectangle is 10 centimeters * 6 centimeters = 60 square centimeters.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c1",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "6",
+        "B": "12",
+        "C": "15",
+        "D": "24"
+      },
+      "question": "A right triangle has sides of length 3, 4, and 5. What is the area of the triangle?",
+      "paragraph": "null",
+      "explanation": "The area of a right triangle is (1\\/2) * base * height. Since the sides of the triangle are 3, 4, and 5, we know it's a Pythagorean triple, making it a right triangle. The base and height are the two shorter sides, so the area is (1\\/2) * 3 * 4 = 6.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c2",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "20%",
+        "B": "40%",
+        "C": "60%",
+        "D": "80%"
+      },
+      "question": "A survey asked 100 people whether they prefer to eat pizza or tacos. The results showed that 60 people prefer pizza, and 40 people prefer tacos. What percentage of the people surveyed prefer tacos?",
+      "paragraph": "null",
+      "explanation": "The percentage of people who prefer tacos can be calculated by dividing the number of people who prefer tacos by the total number of people surveyed and multiplying by 100%. This gives (40\\/100) * 100% = 40%.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a4",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "4",
+        "B": "10",
+        "C": "14",
+        "D": "21"
+      },
+      "question": "If $x + 3 = 7$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we subtract 3 from both sides of the equation: $x + 3 - 3 = 7 - 3$. This gives us $x = 4$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "e60f8e2e",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-3 and 1",
+        "B": "-1 and 3",
+        "C": "1 and -3",
+        "D": "3 and -1"
+      },
+      "question": "What is the solution to the equation  $x^{2} - 2x - 3 = 0$?",
+      "paragraph": "null",
+      "explanation": "The equation is in the form of a quadratic equation, where the coefficients are 1, -2, and -3. This equation can be solved by factoring. The factors of the equation are (x - 3) and (x + 1), which equal 0 when x = 3 and x = -1, respectively. Therefore, the solutions are x = -1 and x = 3.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "1e20d548",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "(x + 2)^2 + (y - 3)^2 = 25",
+        "B": "(x - 2)^2 + (y + 3)^2 = 5",
+        "C": "(x + 2)^2 + (y - 3)^2 = 5",
+        "D": "(x - 2)^2 + (y + 3)^2 = 25"
+      },
+      "question": "A circle in the xy-plane has center (2, -3) and radius 5. Which of the following is an equation for this circle?",
+      "paragraph": "null",
+      "explanation": "The standard form of the equation of a circle with center (h, k) and radius r is (x - h)^2 + (y - k)^2 = r^2.  Substituting the values from the problem gives us (x - 2)^2 + (y + 3)^2 = 5^2, which simplifies to (x - 2)^2 + (y + 3)^2 = 25.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c7",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "15.7 cm",
+        "B": "31.4 cm",
+        "C": "78.5 cm",
+        "D": "157 cm"
+      },
+      "question": "A circle has a radius of 5 cm. What is the circumference of the circle? (Use $\\pi = 3.14$)",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula $C = 2\\pi r$, where $r$ is the radius.  Substituting the given values, we get $C = 2 (3.14)(5) = 31.4$ cm.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "234d5678",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$\frac{1}{10}$",
+        "B": "$\frac{1}{5}$",
+        "C": "$\frac{3}{5}$",
+        "D": "$\frac{7}{10}$"
+      },
+      "question": "What is the value of $\frac{1}{2} \times \frac{2}{3} \times \frac{3}{4} \times \frac{4}{5}$?",
+      "paragraph": "null",
+      "explanation": "Notice that all of the numerators cancel with the denominators except for 1 in the numerator and 10 in the denominator.  This leaves us with $\frac{1}{10}$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_e5",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "5\\pi",
+        "B": "10\\pi",
+        "C": "25\\pi",
+        "D": "100\\pi"
+      },
+      "question": "A circle has a radius of 5. What is the circumference of the circle? ",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula C = 2\\pi r, where r is the radius.  Substituting 5 for r, we get C = 2\\pi (5) = 10\\pi.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c8",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "8",
+        "D": "16"
+      },
+      "question": "What is the value of  $x$ that satisfies the equation $2^x = 16$?",
+      "paragraph": "null",
+      "explanation": "We know that 16 is equal to 2 to the power of 4, or $2^4$.  Therefore, $x = 4$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a7",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "-4",
+        "B": "-2",
+        "C": "2",
+        "D": "4"
+      },
+      "question": "What is the solution to the equation $3x + 5 = 17$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we first subtract 5 from both sides of the equation: $3x + 5 - 5 = 17 - 5$, or $3x = 12$. Next, we divide both sides by 3: $\frac{3x}{3} = \frac{12}{3}$, or $x = 4$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "61b8480a",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-2",
+        "B": "2",
+        "C": "8",
+        "D": "10"
+      },
+      "question": "If $x^2 - 2x - 8 = 0$, what is the sum of the solutions to the equation?",
+      "paragraph": "null",
+      "explanation": "The sum of the roots of a quadratic equation of the form $ax^2 + bx + c = 0$ is given by $-b\\/a$. In this case, the sum of the solutions is $-(-2)\\/1 = 2$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a8e9d4f2",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question": "What is the value of $x$ in the equation $2^{x+1} = 8$?",
+      "paragraph": "null",
+      "explanation": "Since 8 is equal to 2 cubed (2 x 2 x 2 = 8), we can rewrite the equation as  2^(x + 1) = 2^3.  Since the bases are the same, the exponents must be equal:  x + 1 = 3.  Subtracting 1 from both sides gives x = 2.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a214b1b9",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-1",
+        "B": "1",
+        "C": "2",
+        "D": "5"
+      },
+      "question": "What is the value of $\frac{x^2 + 6x + 9}{x+3}$ when $x = 2$?",
+      "paragraph": "null",
+      "explanation": "First, factor the numerator: $\frac{x^2 + 6x + 9}{x+3} = \frac{(x+3)(x+3)}{x+3}$. Then, simplify by canceling out the common factor of $x+3$: $\frac{(x+3)(x+3)}{x+3} = x+3$.  Finally, substitute $x = 2$ into the expression: $2 + 3 = 5$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_5",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "20",
+        "D": "25"
+      },
+      "question": "A square has a side length of 5 units. What is the area of the square?",
+      "paragraph": "null",
+      "explanation": "The area of a square is found by squaring the side length.  Therefore, the area of the square is 5\\u00b2 = 25 square units.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "f890dc20",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "12",
+        "B": "15",
+        "C": "16",
+        "D": "18"
+      },
+      "question": "The following data set represents the number of cars sold by a dealership each day for a week: 12, 15, 18, 14, 21, 16, 19. What is the median number of cars sold?",
+      "paragraph": "null",
+      "explanation": "To find the median, we need to order the data set from least to greatest. This gives us: 12, 14, 15, 16, 18, 19, 21. The median is the middle value, which is 16.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "8a2110dd",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "x^2 - 6",
+        "B": "x^2 - x - 6",
+        "C": "x^2 + x - 6",
+        "D": "x^2 + 5x - 6"
+      },
+      "question": "The expression $(x+2)(x-3)$ is equivalent to which of the following?",
+      "paragraph": "null",
+      "explanation": "Using the distributive property (or FOIL), we can expand the expression: (x+2)(x-3) = x(x-3) + 2(x-3) = x^2 - 3x + 2x - 6 = x^2 - x - 6.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_d7",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "3",
+        "B": "7",
+        "C": "10",
+        "D": "12"
+      },
+      "question": "If $x - 2 = 5$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding 2 to both sides of the equation $x - 2 = 5$ gives us $x = 5 + 2$, or $x = 7$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "f84948c7",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-4",
+        "B": "-2",
+        "C": "2",
+        "D": "4"
+      },
+      "question": "If $x^2 - 2x - 8 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Factoring the quadratic equation gives us  (x - 4)(x + 2) = 0.  Setting each factor equal to zero, we get x - 4 = 0 or x + 2 = 0.  Solving for x in each equation gives us x = 4 or x = -2.  Therefore, x = 4 is a solution to the equation.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "d0d9ede4",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "10",
+        "B": "17",
+        "C": "31",
+        "D": "102"
+      },
+      "question": "How many feet are equivalent to 34 yards? (1 yard = 3 feet)",
+      "paragraph": "null",
+      "explanation": "It's given that 1 yard is equivalent to 3 feet. Therefore, 34 yards is equivalent to (34 yards)(3 feet \\/ 1 yard), or 102 feet.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a1",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "4",
+        "B": "10",
+        "C": "14",
+        "D": "21"
+      },
+      "question": "If  $x + 3 = 7$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we subtract 3 from both sides of the equation: $x + 3 - 3 = 7 - 3$.  This gives us $x = 4$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "9823421a",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question": "What is the solution to the equation $3x + 2 = 14$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we subtract 2 from both sides of the equation, giving us $3x = 12$. Dividing both sides by 3, we get $x = 4$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_12",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "x^2 + 9",
+        "B": "x^2 + 6x + 9",
+        "C": "x^2 + 9x + 9",
+        "D": "x^2 + 3x + 9"
+      },
+      "question": "The expression $(x + 3)^2$ is equivalent to which of the following?",
+      "paragraph": "null",
+      "explanation": "The expression $(x + 3)^2$ is equivalent to $(x + 3)(x + 3)$. Using the distributive property, we expand this to get $x^2 + 3x + 3x + 9$. Combining like terms gives us $x^2 + 6x + 9$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c9",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "3",
+        "C": "9",
+        "D": "27"
+      },
+      "question": "What is the value of  $\frac{3^4}{3^2}$?",
+      "paragraph": "null",
+      "explanation": "Using the rule of exponents that states $\frac{x^m}{x^n} = x^{m-n}$, we can simplify the expression as follows: $\frac{3^4}{3^2} = 3^{4-2} = 3^2 = 9$. Therefore, the value of $\frac{3^4}{3^2}$ is 9.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c3",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question": "If $x + 2y = 5$ and $x - 2y = 1$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together eliminates the $y$ terms and gives us $2x = 6$. Dividing both sides by 2, we get $x = 3$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c3",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$\\pi$",
+        "B": "$5\\pi$",
+        "C": "$10\\pi$",
+        "D": "$25\\pi$"
+      },
+      "question": "A circle has a radius of 5 centimeters. What is the circumference of the circle, in centimeters? (Express your answer in terms of $\\pi$.)",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula $C = 2\\pi r$, where $r$ is the radius.  Substituting 5 for $r$ gives us $C = 2\\pi (5) = 10\\pi$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a3",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "5",
+        "D": "No solution"
+      },
+      "question": "What is the solution to the equation $\frac{x-3}{x+2} = 1$ ?",
+      "paragraph": "null",
+      "explanation": "Multiplying both sides of the equation by $x+2$ gives $x-3 = x+2$. Subtracting $x$ from both sides gives $-3 = 2$. This equation is false, so there is no solution to the original equation. The original equation is undefined when $x=-2$. ",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "2d8c4434",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-7",
+        "B": "-1",
+        "C": "1",
+        "D": "7"
+      },
+      "question": "The function f(x) is defined as $f(x) = x^2 - 3$. What is the value of $f(-2)$?",
+      "paragraph": "null",
+      "explanation": "To find the value of $f(-2)$, we substitute -2 for $x$ in the function. This gives us  $f(-2) = (-2)^2 - 3$, or $f(-2) = 4 - 3 = 1$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "b678452b",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "question": "If $3x + 4y = 17$ and $2x - 3y = 9$, what is the value of $x + y$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x+y$, we can add the two equations together.  Adding the left sides gives us $(3x + 4y) + (2x - 3y) = 5x + y$.  Adding the right sides gives us $17 + 9 = 26$.  Therefore, $5x + y = 26$.  Dividing both sides by 5 gives us $x + y = \frac{26}{5}$, or $x + y = 5.2$.  Since the answer must be a whole number, we round 5.2 to the nearest whole number, 5.  Therefore, $x + y = 5$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c7",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "9"
+      },
+      "question": "What is the value of $x$ in the equation $3x+4 = 13$?",
+      "paragraph": "null",
+      "explanation": "To solve for x, we first subtract 4 from both sides of the equation, giving us $3x = 9$. Dividing both sides by 3, we get $x = 3$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "6f28325d",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "5\\pi",
+        "B": "10\\pi",
+        "C": "25\\pi",
+        "D": "50\\pi"
+      },
+      "question": "A circle has a radius of 5.  What is the circumference of the circle? ",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula $C = 2\\pi r$, where $r$ is the radius.  Substituting $r = 5$ into the formula gives us $C = 2\\pi (5) = 10\\pi$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_b8",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16"
+      },
+      "question": "If $x = 3y + 2$, and $y = 4$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Substituting 4 for *y* in the equation *x* = 3*y* + 2 gives *x* = 3(4) + 2, or *x* = 12 + 2 = 14.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a5",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "13",
+        "D": "16"
+      },
+      "question": "If  $y = 2x + 3$ and $x = 5$, what is the value of $y$?",
+      "paragraph": "null",
+      "explanation": "Substituting the value of $x = 5$ into the equation $y = 2x + 3$ gives us $y = 2(5) + 3 = 10 + 3 = 13$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "834f21d4",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "40",
+        "B": "50",
+        "C": "70",
+        "D": "120"
+      },
+      "question": "A survey of 200 students found that 120 students prefer pizza, 80 students prefer tacos, and 50 students prefer both pizza and tacos. How many students prefer only pizza?",
+      "paragraph": "null",
+      "explanation": "Since 50 students prefer both pizza and tacos, 120 - 50 = 70 students prefer only pizza.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "132b6748",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "25",
+        "D": "50"
+      },
+      "question": "What is the value of  $x$ if  $x^2 - 10x + 25 = 0$?",
+      "paragraph": "null",
+      "explanation": "The equation $x^2 - 10x + 25 = 0$ is a perfect square trinomial, which can be factored as $(x - 5)^2 = 0$. Taking the square root of both sides gives $x - 5 = 0$. Adding 5 to both sides gives $x = 5$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "d3d44ee4",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "question": "If  $y = 2x + 1$ and  $x = 3$, what is the value of *y*?",
+      "paragraph": "null",
+      "explanation": "Substituting *x* = 3 into the equation  *y* = 2*x* + 1, we get *y* = 2(3) + 1, or *y* = 6 + 1, or *y* = 7.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "a46732c5",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "x^2 - 4",
+        "B": "x^2 + 4",
+        "C": "x^2 - 2x + 4",
+        "D": "x^2 + 2x - 4"
+      },
+      "question": "The expression $(x + 2)(x - 2)$ is equivalent to which of the following? ",
+      "paragraph": "null",
+      "explanation": "This expression is a difference of squares, which follows the pattern $(a + b)(a - b) = a^2 - b^2$. In this case, $a = x$ and $b = 2$, so $(x + 2)(x - 2) = x^2 - 2^2 = x^2 - 4$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c3",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "15.7",
+        "B": "31.4",
+        "C": "78.5",
+        "D": "314",
+        "E": "1570"
+      },
+      "question": "A circle has a diameter of 10 centimeters. What is the area, in square centimeters, of the circle? (Use $\\pi = 3.14$)",
+      "paragraph": "null",
+      "explanation": "The area of a circle is given by the formula $A = \\pi r^2$, where $r$ is the radius of the circle. Since the diameter is 10 centimeters, the radius is 5 centimeters.  Substituting 3.14 for $\\pi$ and 5 for $r$ in the formula yields $A = 3.14 \\cdot 5^2 = 3.14 \\cdot 25 = 78.5$.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "209e74d9",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-5",
+        "B": "-3",
+        "C": "3",
+        "D": "5"
+      },
+      "question": "If $x^2 - 2x - 15 = 0$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for $x$, we can factor the quadratic equation.  The factors of -15 that add up to -2 are -5 and 3.  So, the equation factors as $(x - 5)(x + 3) = 0$.  Setting each factor equal to zero, we get $x - 5 = 0$ or $x + 3 = 0$. Solving for x, we find $x = 5$ or $x = -3$.  Since the problem asks for the value of x, and 5 is a choice, x = 5 is the correct answer.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_8",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "$y=\frac{1}{3}x-4$",
+        "B": "$y=x-4$",
+        "C": "$y=\frac{1}{3}x+4$",
+        "D": "$y=-\frac{1}{3}x-4$"
+      },
+      "question": "If $x - 3y = 12$, what is the value of $y$ in terms of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for *y*, we can add *3y* to both sides of the equation, then subtract 12 from both sides. This gives us *3y = x - 12*. Dividing both sides by 3, we find that *y = -\frac{1}{3}x - 4*.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a2",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "4",
+        "B": "10",
+        "C": "14",
+        "D": "21"
+      },
+      "question": "If $x + 3 = 7$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Subtracting 3 from both sides of the equation, we get $x = 7 - 3$, or $x = 4$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c7",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "50"
+      },
+      "question": "If $x+5 = 10$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for x, we subtract 5 from both sides of the equation:  $x + 5 - 5 = 10 - 5$.  This gives us $x = 5$.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "d7546482",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "5*pi",
+        "B": "10*pi",
+        "C": "25*pi",
+        "D": "50*pi"
+      },
+      "question": "A circle has a radius of 5. What is the circumference of the circle? (Express your answer in terms of *pi*)",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula C = 2 * pi * r, where r is the radius.  Substituting 5 for r, we get C = 2 * pi * 5 = 10*pi.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a8",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "7",
+        "C": "17",
+        "D": "60"
+      },
+      "question": "If $x+5=12$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "To solve for *x*, we subtract 5 from both sides of the equation:  *x* + 5 - 5 = 12 - 5, which simplifies to *x* = 7.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "4c9664d4",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "4\\pi",
+        "B": "8\\pi",
+        "C": "16\\pi",
+        "D": "64\\pi"
+      },
+      "question": "The area of a circle is $16\\pi$ square inches.  What is the circumference of the circle, in inches?",
+      "paragraph": "null",
+      "explanation": "The area of a circle is given by $A = \\pi r^2$, where $r$ is the radius of the circle.  We are given that the area is $16\\pi$ square inches, so $16\\pi = \\pi r^2$. Dividing both sides by $\\pi$ gives $16 = r^2$, so $r = 4$. The circumference of a circle is given by $C = 2\\pi r$, so $C = 2\\pi (4) = 8\\pi$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_b9",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "15",
+        "B": "25",
+        "C": "50",
+        "D": "100"
+      },
+      "question": "A rectangle has a length of 10 inches and a width of 5 inches. What is the area of the rectangle, in square inches?",
+      "paragraph": "null",
+      "explanation": "The area of a rectangle is calculated by multiplying its length and width.  In this case, the area is 10 inches * 5 inches = 50 square inches.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c2",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "15.7 cm",
+        "B": "31.4 cm",
+        "C": "78.5 cm",
+        "D": "157 cm"
+      },
+      "question": "A circle has a radius of 5 cm. What is the circumference of the circle? (Use $\\pi = 3.14$)",
+      "paragraph": "null",
+      "explanation": "The circumference of a circle is given by the formula $C = 2\\pi r$, where $r$ is the radius. Substituting 5 cm for $r$ and 3.14 for $\\pi$, we get $C = 2(3.14)(5) = 31.4$ cm.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_d5",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
+      },
+      "question": "If $x+y = 5$ and $x-y=1$, what is the value of $x$?",
+      "paragraph": "null",
+      "explanation": "Adding the two equations together, we get $(x+y) + (x-y) = 5+1$, or $2x = 6$. Dividing both sides by 2 gives $x = 3$.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a5",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "$\frac{1}{6}$",
+        "B": "$\frac{1}{2}$",
+        "C": "2",
+        "D": "6"
+      },
+      "question": "If $\frac{x}{y}= 3$ and $\frac{y}{z}= 2$, what is the value of $\frac{x}{z}$?",
+      "paragraph": "null",
+      "explanation": "To find the value of $\frac{x}{z}$, we can multiply the two given equations: $(\frac{x}{y}) \\cdot (\frac{y}{z}) = 3 \\cdot 2$.  Notice that the $y$ terms cancel out, leaving us with $\frac{x}{z} = 6$.",
+      "correct_answer": "D"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_a1",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "20",
+        "B": "40",
+        "C": "60",
+        "D": "80"
+      },
+      "question": "A survey of 100 people found that 60 people like apples, 40 people like oranges, and 20 people like both apples and oranges. How many people like only apples?",
+      "paragraph": "null",
+      "explanation": "We can use a Venn Diagram to represent the information given. \begin{align*} \text{People who like only apples} &= \text{People who like apples} - \text{People who like both apples and oranges} \\\\ &= 60 - 20\\\\ &= 40 \\end{align*} Therefore, 40 people like only apples.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c1",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question": "If $x + 2y = 5$ and $x - y = 2$, what is the value of $y$?",
+      "paragraph": "null",
+      "explanation": "We can solve this system of equations by elimination. Adding the two equations together, we get  (x + 2y) + (x - y) = 5 + 2, or 2x + y = 7. Simplifying the first equation, we get x = 5 - 2y. Substituting this into the second equation, we get (5 - 2y) - y = 2, or 3y = 3. Therefore, y = 1.",
+      "correct_answer": "A"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_d3",
+    "domain": "Advanced Math",
+    "question": {
+      "choices": {
+        "A": "-4",
+        "B": "4",
+        "C": "-4 and 4",
+        "D": "-8 and 8"
+      },
+      "question": "If $x^2 - 16 = 0$, what are the possible values of $x$?",
+      "paragraph": "null",
+      "explanation": "The equation is a difference of squares. We can factor it as (x + 4)(x - 4) = 0.  For the product of two factors to equal zero, at least one of the factors must equal zero. Therefore, either x + 4 = 0 or x - 4 = 0. Solving for x in each equation gives us x = -4 or x = 4.",
+      "correct_answer": "C"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "f21c6b4d",
+    "domain": "Geometry and Trigonometry",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "4\\sqrt{3}",
+        "D": "8\\sqrt{3}"
+      },
+      "question": "In a right triangle, one angle measures 30 degrees. The length of the hypotenuse of this triangle is 8. What is the length of the shorter leg?",
+      "paragraph": "null",
+      "explanation": "A 30-60-90 right triangle has side ratios of $x$, $x\\sqrt{3}$, and $2x$. Since the hypotenuse is 8, we know $2x = 8$, so $x=4$.  The shorter leg is equal to $x$, so its length is 4.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_15",
+    "domain": "Algebra",
+    "question": {
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question": "If 2x + 3 = 11, what is the value of x?",
+      "paragraph": "null",
+      "explanation": "To solve for x, we subtract 3 from both sides of the equation: 2x + 3 - 3 = 11 - 3. This gives us 2x = 8. Dividing both sides by 2, we get x = 8\\/2, or x = 4.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  },
+  {
+    "id": "random_id_c6",
+    "domain": "Problem-Solving and Data Analysis",
+    "question": {
+      "choices": {
+        "A": "40%",
+        "B": "60%",
+        "C": "80%",
+        "D": "120%"
+      },
+      "question": "A survey of 200 high school students found that 120 students prefer to take math classes in the morning, and 80 students prefer to take math classes in the afternoon. What percentage of the students surveyed prefer to take math classes in the morning? ",
+      "paragraph": "null",
+      "explanation": "To find the percentage of students who prefer morning math classes, we divide the number who prefer morning classes by the total number of students surveyed and multiply by 100%:  (120 students \\/ 200 students) * 100% = 60%.",
+      "correct_answer": "B"
+    },
+    "difficulty": "Easy"
+  }
+]
